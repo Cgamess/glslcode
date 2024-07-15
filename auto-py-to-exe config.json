@@ -1,0 +1,89 @@
+{
+ "version": "auto-py-to-exe-configuration_v1",
+ "pyinstallerOptions": [
+  {
+   "optionDest": "noconfirm",
+   "value": true
+  },
+  {
+   "optionDest": "filenames",
+   "value": "C:/Users/evafo/Downloads/glslcode/glslwindow.py"
+  },
+  {
+   "optionDest": "onefile",
+   "value": false
+  },
+  {
+   "optionDest": "console",
+   "value": false
+  },
+  {
+   "optionDest": "name",
+   "value": "glsl image thing"
+  },
+  {
+   "optionDest": "clean_build",
+   "value": false
+  },
+  {
+   "optionDest": "optimize",
+   "value": "2"
+  },
+  {
+   "optionDest": "strip",
+   "value": false
+  },
+  {
+   "optionDest": "noupx",
+   "value": false
+  },
+  {
+   "optionDest": "disable_windowed_traceback",
+   "value": false
+  },
+  {
+   "optionDest": "uac_admin",
+   "value": false
+  },
+  {
+   "optionDest": "uac_uiaccess",
+   "value": false
+  },
+  {
+   "optionDest": "argv_emulation",
+   "value": false
+  },
+  {
+   "optionDest": "bootloader_ignore_signals",
+   "value": false
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/evafo/Downloads/glslcode/frag.glsl;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/evafo/Downloads/glslcode/vertex.glsl;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/evafo/Downloads/glslcode/myflag.png;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/evafo/Downloads/glslcode/vertexalt.glsl;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/evafo/Downloads/glslcode/jevil.png;."
+  },
+  {
+   "optionDest": "binaries",
+   "value": "C:/Users/evafo/Downloads/glslcode/SDL2.dll;."
+  }
+ ],
+ "nonPyinstallerOptions": {
+  "increaseRecursionLimit": true,
+  "manualArguments": ""
+ }
+}
