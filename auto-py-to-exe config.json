@@ -11,7 +11,7 @@
   },
   {
    "optionDest": "onefile",
-   "value": false
+   "value": true
   },
   {
    "optionDest": "console",
@@ -80,10 +80,22 @@
   {
    "optionDest": "binaries",
    "value": "C:/Users/evafo/Downloads/glslcode/SDL2.dll;."
+  },
+  {
+   "optionDest": "binaries",
+   "value": "C:/Users/evafo/Downloads/test/python.exe;."
+  },
+  {
+   "optionDest": "binaries",
+   "value": "C:/Users/evafo/Downloads/test/python3.dll;."
+  },
+  {
+   "optionDest": "binaries",
+   "value": "C:/Users/evafo/Downloads/test/python312.dll;."
   }
  ],
  "nonPyinstallerOptions": {
-  "increaseRecursionLimit": true,
+  "increaseRecursionLimit": false,
   "manualArguments": ""
  }
 }
