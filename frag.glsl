@@ -13,7 +13,7 @@ uniform bool u_enableWave;
 uniform bool u_enableWave2;      // Toggle for wave2 effect
 uniform bool u_enableRandomOffset;
 uniform float u_sides;
-uniform float u_speed;  // Speed multiplier for wave2 animation
+uniform float u_speed;  // Speed multiplier for wave animations
 
 // A simple pseudo-random function
 float random(vec2 co){
@@ -44,13 +44,13 @@ void main()
     
     // Apply wave effect if enabled
     if (u_enableWave) {
-        float waveAmplitude = 0.1;  // Amplitude of the wave distortion
-        float waveFrequency = 5.0;   // Frequency of the wave distortion
-        float waveOffset = sin(u_time * 2.0 * 3.14159265359 / 1000000000.0) * 0.5 + 0.5;  // Time-based offset for animation
-        uv += vec2(
-            waveAmplitude * sin(waveFrequency * uv.y + u_time * 2.0 * 3.14159265359 / 1000000000.0 + waveOffset),
-            waveAmplitude * cos(waveFrequency * uv.x + u_time * 1.5 * 3.14159265359 / 1000000000.0 + waveOffset)
-        );
+        float waveAmplitude = 0.1;
+        float waveFrequency = 5.0;
+        // Calculate wave offset using sine function based on time and speed
+        float waveOffset = sin(u_time * u_speed + uv.x * waveFrequency) * waveAmplitude;
+
+        // Apply wave offset to uv.y (vertical wave)
+        uv.y += waveOffset;
     }
    
     // Apply wave2 effect if enabled
