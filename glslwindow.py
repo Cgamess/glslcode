@@ -1,3 +1,5 @@
+import os
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 from OpenGL.GL import *
 from OpenGL.GL.shaders import compileProgram, compileShader
