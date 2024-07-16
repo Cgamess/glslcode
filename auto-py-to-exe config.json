@@ -78,6 +78,10 @@
    "value": "C:/Users/evafo/Downloads/glslcode/jevil.png;."
   },
   {
+    "optionDest": "datas",
+    "value": "C:/Users/evafo/Downloads/glslcode/LICENSE;."
+  }, 
+  {
    "optionDest": "binaries",
    "value": "C:/Users/evafo/Downloads/glslcode/SDL2.dll;."
   },
