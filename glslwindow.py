@@ -139,7 +139,6 @@ def main():
         u_speed=2
         # Main loop
         while True:
-            u_speed+=.001
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
