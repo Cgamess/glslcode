@@ -8,6 +8,7 @@ import tkinter as tk
 from tkinter import filedialog
 import numpy as np
 import time
+import json
 
 def open_file_dialog(types=[("PNG files", "*.png")], title="Image"):
     root = tk.Tk()
@@ -23,6 +24,10 @@ VERTEX_SHADER = open(open_file_dialog([("glsl files", "*.glsl")],"vertex")).read
 
 # Fragment shader source code
 FRAGMENT_SHADER = open(open_file_dialog([("glsl files", "*.glsl")],"frag")).read()
+
+# Fragment shader Json config
+FRAGMENT_SHADER_CONFIG = json.loads(open(open_file_dialog([("json files", "*.json")],"frag config")).read())
+
 
 def initialize_pygame():
     pygame.init()
@@ -117,6 +122,7 @@ def main():
         u_speed=2
         # Main loop
         while True:
+            u_speed+=.001
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -142,25 +148,13 @@ def main():
             # Use shader program
             glUseProgram(shader_program)
 
+
             # Set u_time uniform in the shader
             glUniform1f(glGetUniformLocation(shader_program, "u_time"), float(u_time))
             glUniform1f(glGetUniformLocation(shader_program, "u_mtime"), float(u_mtime))
             
-            
-
-            # select active modes
-            glUniform1f(glGetUniformLocation(shader_program, "u_enableKaleidoscope"), False)
-            glUniform1f(glGetUniformLocation(shader_program, "u_enableWave"), False)
-            glUniform1f(glGetUniformLocation(shader_program, "u_enableWave2"), True)
-            glUniform1f(glGetUniformLocation(shader_program, "u_enableRandomOffset"), False)
-
-            # mode settings
-            glUniform1f(glGetUniformLocation(shader_program, "u_sides"), sides)
-            glUniform1f(glGetUniformLocation(shader_program, "u_speed"), float(u_speed))
-            
-            
-            
-
+            for i in FRAGMENT_SHADER_CONFIG["SETTINGS"]:
+                glUniform1f(glGetUniformLocation(shader_program, i), FRAGMENT_SHADER_CONFIG["SETTINGS"][i])
 
             # Bind texture
             glActiveTexture(GL_TEXTURE0)

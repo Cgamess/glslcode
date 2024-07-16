@@ -1,0 +1,10 @@
+{
+    "SETTINGS":{
+        "u_enableKaleidoscope":true,
+        "u_enableWave":true,
+        "u_enableWave2":true,
+        "u_enableRandomOffset":true,
+        "u_sides":6.0,
+        "u_speed":2.0
+    }
+}

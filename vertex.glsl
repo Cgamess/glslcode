@@ -7,7 +7,6 @@ out vec2 TexCoord;
 
 void main()
 {
-    // Perform vertical flip
     gl_Position = vec4(aPos, 1.0);
     TexCoord = vec2(aTexCoord.x, aTexCoord.y);
 }
