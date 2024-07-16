@@ -13,7 +13,7 @@ Copyright 2024 Calvin Larsen:
 software and other kinds of works, specifically designed to ensure
 cooperation with the community in the case of network server software.
 
-Rest in ./LICENCE
+The Rest in ./LICENCE
 https://github.com/Cgamess/glslcode
 """ 
 if 0: print(license) # assigned it to a var and put it in a print statement to keep it in the code after compilation
