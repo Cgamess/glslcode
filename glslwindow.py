@@ -16,9 +16,9 @@ cooperation with the community in the case of network server software.
 The Rest in ./LICENCE
 https://github.com/Cgamess/glslcode
 """ 
-if 0: print(license) # assigned it to a var and put it in a print statement to keep it in the code after compilation
+if 0: print(licence) # assigned it to a var and put it in a print statement to keep it in the code after compilation
 import os
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = r"glslcode: https://github.com/Cgamess/glslcode"
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = r"glslcode: https://github.com/Cgamess/glslcode"+"\n"+licence
 import pygame
 from OpenGL.GL import *
 from OpenGL.GL.shaders import compileProgram, compileShader
