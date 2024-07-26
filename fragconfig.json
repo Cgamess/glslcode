@@ -1,8 +1,8 @@
 {
     "SETTINGS":{
         "u_enableKaleidoscope":false,
-        "u_enableWave":true,
-        "u_enableWave2":false,
+        "u_enableWave":false,
+        "u_enableWave2":true,
         "u_enableRandomOffset":false,
         "u_sides":6.0,
         "u_speed":2.0

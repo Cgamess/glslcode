@@ -49,6 +49,7 @@ FRAGMENT_SHADER_CONFIG = json.loads(open(open_file_dialog([("json files", "*.jso
 def initialize_pygame():
     pygame.init()
     display = pygame.display.set_mode((800, 600), pygame.OPENGL | pygame.DOUBLEBUF)
+    return display
 
 def load_texture(filename):
     # Load image using PIL (Pillow)
@@ -74,7 +75,9 @@ def load_texture(filename):
 
 def main():
     # Initialize Pygame and OpenGL context
-    initialize_pygame()
+    screen = initialize_pygame()
+
+    glClearColor(0.5, 0.5, 0.5, 0.5)
 
     # Open file dialog to select PNG image
     filename = open_file_dialog()
